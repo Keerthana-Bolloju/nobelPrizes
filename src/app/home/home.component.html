@@ -1,0 +1,42 @@
+
+
+ <label class="dflex dropdown">
+
+  <div class="dd-button">
+    Sort By
+  </div>
+
+  <input type="checkbox" class="dd-input" id="test">
+
+  <ul class="dd-menu">
+    <li (click)="allNobels()">All Prizes</li>
+    <li>Category</li>
+    <li *ngFor="let cat of category" (click)="byCategory(cat)">{{cat}}</li>
+    <li (click)="byYear()">Year</li>
+  </ul>  
+</label>
+
+<div class="content" *ngIf="!sorted">
+  <!-- card -->
+  <div class="card" *ngFor="let card of nobelpriceArr | paginate: { itemsPerPage: 20, currentPage: p }">
+    <div class="icon"><i class="material-icons md-36">face</i></div>
+    <p class="title">{{card.category}} {{card.year}}</p>
+    <div class="text" *ngFor="let i of card.laureates">
+      <p>{{i.firstname}} {{i.surname}}</p>
+    </div>
+  </div>
+  <!-- end card -->
+  <pagination-controls (pageChange)="p = $event" responsive="true" ></pagination-controls>
+</div>
+<div class="content" *ngIf="sorted">
+  <!-- card -->
+  <div class="card" *ngFor="let card of sortedArr | paginate: { itemsPerPage: 20, currentPage: p }">
+    <div class="icon"><i class="material-icons md-36">face</i></div>
+    <p class="title">{{card.category}} {{card.year}}</p>
+    <div class="text" *ngFor="let i of card.laureates">
+      <p>{{i.firstname}} {{i.surname}}</p>
+    </div>
+  </div>
+  <!-- end card -->
+  <pagination-controls (pageChange)="p = $event" responsive="true" ></pagination-controls>
+</div>

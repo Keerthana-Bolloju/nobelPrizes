@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+ .wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    height: 400px;
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+ }
+ 
+ @media screen and (max-width: 767px) {
+    .wrapper {
+       height: 700px;
+    }
+ }
+ 
+ .content {
+    // max-width: 1024px;
+    // width: 100%;
+    // padding: 0 4%;
+    padding: 20px;
+    // margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ @media screen and (max-width: 767px) {
+    .content {
+       padding: 30px;
+       flex-direction: column;
+    }
+ }
+ 
+ .card {
+    width: 100%;
+    max-width: 300px;
+    min-width: 200px;
+    height: 250px;
+    background-color: #292929;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 16px;   
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+ }
+ 
+ .icon {
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    max-width:80px;
+    background: linear-gradient(90deg, #FF7E7E 0%, #FF4848 40%, rgba(0, 0, 0, 0.28) 60%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.8s ease;
+    background-position: 0px;
+    background-size: 200px;
+ }
+ 
+ .material-icons.md-18 { font-size: 18px; }
+ .material-icons.md-24 { font-size: 24px; }
+ .material-icons.md-36 { font-size: 36px; }
+ .material-icons.md-48 { font-size: 48px; }
+ 
+ .card .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+ }
+ 
+ .card .text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 2px;
+    opacity: 0;
+    max-height:0;
+    transition: all 0.3s ease;
+ }
+ 
+ .card:hover {
+    height: 270px;
+ }
+ 
+ .card:hover .info {
+    height: 90%;
+ }
+ 
+ .card:hover .text {
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height:40px;
+ }
+ 
+ .card:hover .icon {
+    background-position: -120px;
+    transition: all 0.3s ease;
+ }
+ 
+ .card:hover .icon i {
+    background: linear-gradient(90deg, #FF7E7E, #FF4848);
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: all 0.3s ease;
+ }
+
+//  .ngx-pagination {
+//     & .current, & .pagination-next {
+//         background: white;
+//       }
+//  }
+
+a {
+   text-decoration: none;
+   color: #000000;
+ }
+ 
+ a:hover {
+   color: #222222
+ }
+ 
+ /* Dropdown */
+ 
+ .dropdown {
+   display: inline-block;
+   position: relative;
+ }
+ 
+ .dd-button {
+   display: flex;
+   justify-content: end;
+   border: 1px solid gray;
+   border-radius: 4px;
+   padding: 10px 30px 10px 20px;
+   background-color: #ffffff;
+   cursor: pointer;
+   white-space: nowrap;
+ }
+ 
+ .dd-button:after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   right: 15px;
+   transform: translateY(-50%);
+   width: 0; 
+   height: 0; 
+   border-left: 5px solid transparent;
+   border-right: 5px solid transparent;
+   border-top: 5px solid black;
+ }
+ 
+ .dd-button:hover {
+   background-color: #eeeeee;
+ }
+ 
+ 
+ .dd-input {
+   display: none;
+ }
+ 
+ .dd-menu {
+   position: absolute;
+   top: 100%;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   padding: 0;
+   margin: 2px 0 0 0;
+   box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+   background-color: #ffffff;
+   list-style-type: none;
+ }
+ 
+ .dd-input + .dd-menu {
+   display: none;
+ } 
+ 
+ .dd-input:checked + .dd-menu {
+   display: block;
+ } 
+ 
+ .dd-menu li {
+   padding: 10px 20px;
+   cursor: pointer;
+   white-space: nowrap;
+ }
+ 
+ .dd-menu li:hover {
+   background-color: #f6f6f6;
+ }
+ 
+ .dd-menu li a {
+   display: block;
+   margin: -10px -20px;
+   padding: 10px 20px;
+ }
+ 
+ .dd-menu li.divider{
+   padding: 0;
+   border-bottom: 1px solid #cccccc;
+ }
+.dflex{
+   display: flex;
+   justify-content: end;
+}
